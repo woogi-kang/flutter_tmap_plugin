@@ -5,4 +5,8 @@ class FlutterTmapPlugin {
   Future<String?> getPlatformVersion() {
     return FlutterTmapPluginPlatform.instance.getPlatformVersion();
   }
+
+  Future<String?> initSDK() {
+    return FlutterTmapPluginPlatform.instance.initSDK();
+  }
 }

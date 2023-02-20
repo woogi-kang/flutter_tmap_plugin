@@ -14,4 +14,10 @@ class MethodChannelFlutterTmapPlugin extends FlutterTmapPluginPlatform {
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
+
+  @override
+  Future<String?> initSDK() async {
+    final initialized = await methodChannel.invokeMethod<String>('initSDK');
+    return initialized;
+  }
 }

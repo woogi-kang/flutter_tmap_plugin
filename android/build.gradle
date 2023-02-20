@@ -44,3 +44,7 @@ android {
         minSdkVersion 16
     }
 }
+
+dependencies {
+    implementation files('lib/com.skt.Tmap_1.75.jar')
+}
