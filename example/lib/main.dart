@@ -1,49 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tmap_plugin/flutter_tmap_plugin.dart';
-import 'package:flutter_tmap_plugin_example/flutter_tmap_view.dart';
+import 'package:tmap_flutter_example/native_view_example.dart';
+import 'package:tmap_flutter_example/virtual_display_example.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      title: '쾌변',
-      theme: ThemeData(
-        primaryColor: Colors.black,
-      ),
-      home: MagicScreen(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
-class MagicScreen extends StatefulWidget {
-  @override
-  _MagicScreenState createState() => _MagicScreenState();
-}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-class _MagicScreenState extends State<MagicScreen> {
-  FlutterTmapPlugin _flutterTmapPlugin = FlutterTmapPlugin(3);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Magic App"),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      body: Stack(
-        children: <Widget>[
-          TmapView(
-            key: GlobalKey(),
-            onTmapViewCreated: (FlutterTmapPlugin controller) {
-              setState(() {
-                _flutterTmapPlugin = controller;
-              });
-            },
+      home: SafeArea(
+        child: Scaffold(
+          body: Center(
+            child: GestureDetector(
+              onTap: () {
+                print("onTap");
+              },
+              onTapCancel: () {
+                print("onTapCancel");
+              },
+              onLongPress: () {
+                print("onTapCancel");
+              },
+              onDoubleTap: () {
+                print("onTapCancel");
+              },
+              child: const NativeViewExample(),
+            ),
           ),
-        ],
-      ),
-      floatingActionButton: IconButton(
-        icon: Icon(Icons.add),
-        onPressed: () {
-          _flutterTmapPlugin.receiveFromFlutter('hello');
-        },
+        ),
       ),
     );
   }

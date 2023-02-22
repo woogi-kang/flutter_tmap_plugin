@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftFlutterTmapPlugin: NSObject, FlutterPlugin {
+public class SwiftTmapFlutterPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_tmap_plugin", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterTmapPlugin()
+    let channel = FlutterMethodChannel(name: "tmap_flutter", binaryMessenger: registrar.messenger())
+    let instance = SwiftTmapFlutterPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

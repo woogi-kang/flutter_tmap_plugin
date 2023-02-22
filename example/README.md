@@ -1,6 +1,6 @@
-# flutter_tmap_plugin_example
+# tmap_flutter_example
 
-Demonstrates how to use the flutter_tmap_plugin plugin.
+Demonstrates how to use the tmap_flutter plugin.
 
 ## Getting Started
 

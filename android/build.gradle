@@ -1,4 +1,4 @@
-group 'woo.flutter_tmap_plugin.flutter_tmap_plugin'
+group 'com.example.tmap_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {

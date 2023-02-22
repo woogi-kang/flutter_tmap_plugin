@@ -1,5 +1,5 @@
-name: flutter_tmap_plugin
-description: A new Flutter plugin project.
+name: tmap_flutter
+description: A new Flutter project.
 version: 0.0.1
 homepage:
 
@@ -35,10 +35,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: woo.flutter_tmap_plugin.flutter_tmap_plugin
-        pluginClass: FlutterTmapPlugin
+        package: com.example.tmap_flutter
+        pluginClass: TmapFlutterPlugin
       ios:
-        pluginClass: FlutterTmapPlugin
+        pluginClass: TmapFlutterPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
